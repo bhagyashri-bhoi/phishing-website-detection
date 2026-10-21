@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Website Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Phishing Website Detection</h1>
+
+    <p>Enter the 30 website feature values to check whether the website is Phishing or Legitimate.</p>
+
+    <form method="POST">
+
+        <input name="having_ip_address" placeholder="Having IP Address" required>
+        <input name="url_length" placeholder="URL Length" required>
+        <input name="shortining_service" placeholder="Shortening Service" required>
+        <input name="having_at_symbol" placeholder="Having @ Symbol" required>
+        <input name="double_slash_redirecting" placeholder="Double Slash Redirecting" required>
+        <input name="prefix_suffix" placeholder="Prefix Suffix" required>
+        <input name="having_sub_domain" placeholder="Having Sub Domain" required>
+        <input name="sslfinal_state" placeholder="SSL Final State" required>
+        <input name="domain_registration_length" placeholder="Domain Registration Length" required>
+        <input name="favicon" placeholder="Favicon" required>
+
+        <input name="port" placeholder="Port" required>
+        <input name="https_token" placeholder="HTTPS Token" required>
+        <input name="request_url" placeholder="Request URL" required>
+        <input name="url_of_anchor" placeholder="URL of Anchor" required>
+        <input name="links_in_tags" placeholder="Links in Tags" required>
+        <input name="sfh" placeholder="SFH" required>
+        <input name="submitting_to_email" placeholder="Submitting to Email" required>
+        <input name="abnormal_url" placeholder="Abnormal URL" required>
+        <input name="redirect" placeholder="Redirect" required>
+        <input name="on_mouseover" placeholder="On Mouseover" required>
+
+        <input name="rightclick" placeholder="Right Click" required>
+        <input name="popupwindow" placeholder="Popup Window" required>
+        <input name="iframe" placeholder="Iframe" required>
+        <input name="age_of_domain" placeholder="Age of Domain" required>
+        <input name="dnsrecord" placeholder="DNS Record" required>
+        <input name="web_traffic" placeholder="Web Traffic" required>
+        <input name="page_rank" placeholder="Page Rank" required>
+        <input name="google_index" placeholder="Google Index" required>
+        <input name="links_pointing_to_page" placeholder="Links Pointing to Page" required>
+        <input name="statistical_report" placeholder="Statistical Report" required>
+
+        <button type="submit">Check Website</button>
+
+    </form>
+
+    {% if prediction %}
+        <h2>{{ prediction }}</h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
